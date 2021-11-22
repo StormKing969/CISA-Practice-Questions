@@ -1,0 +1,18 @@
+$primaryColor: red;
+$textColor: black;
+
+body {
+    background: $primaryColor;
+}
+
+header {
+    background: $textColor;
+
+    button {
+        background: $primaryColor;
+
+        &:hover {
+            background: green;
+        }
+    }
+}

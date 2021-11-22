@@ -1,0 +1,16 @@
+body {
+  background: red;
+}
+
+header {
+  background: black;
+}
+
+header button {
+  background: red;
+}
+
+header button:hover {
+  background: green;
+}
+/*# sourceMappingURL=style.css.map */
