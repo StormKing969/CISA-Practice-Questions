@@ -1,16 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  background: red;
+  font-family: 'Source Serif Pro', serif;
+  background: #007bff;
 }
 
-header {
-  background: black;
+.start_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-header button {
-  background: red;
+.start_btn button {
+  font-size: 25px;
+  font-weight: 400;
+  color: #007bff;
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
 }
 
-header button:hover {
-  background: green;
+.rule_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 540px;
+  background: #fff;
+  border-radius: 5px;
+  display: none;
+}
+
+.rule_box .rule_title {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 35px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.rule_box .rule_list {
+  padding: 15px 35px;
+}
+
+.rule_box .rule_list .rule {
+  margin: 5px 0;
+  font-size: 17px;
+}
+
+.rule_box .rule_list .rule span {
+  font-weight: 600;
+  color: #007bff;
+}
+
+.rule_box .buttons {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 35px;
+  border-top: 1px solid lightgrey;
+}
+
+.rule_box .buttons button {
+  margin: 0 5px;
+  height: 40px;
+  width: 100px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.rule_box .buttons .quit_quiz {
+  color: #007bff;
+}
+
+.rule_box .buttons .quit_quiz:hover {
+  color: #fff;
+  background: #007bff;
+}
+
+.rule_box .buttons .start_quiz {
+  color: #fff;
+  background: #007bff;
+}
+
+.rule_box .buttons .start_quiz:hover {
+  background: #023f81;
 }
 /*# sourceMappingURL=style.css.map */

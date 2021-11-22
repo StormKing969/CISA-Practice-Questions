@@ -1,0 +1,75 @@
+.rule_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 540px;
+    background: $neutral-color;
+    border-radius: 5px;
+    display: none;
+
+    .rule_title {
+        height: 60px;
+        width: 100%;
+        border-bottom: 1px solid lightgrey;
+        display: flex;
+        align-items: center;
+        padding: 0 35px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .rule_list {
+        padding: 15px 35px;
+
+        .rule {
+            margin: 5px 0;
+            font-size: 17px;
+
+            span {
+                font-weight: 600;
+                color: $base-color;
+            }
+        }
+    }
+
+    .buttons {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 35px;
+        border-top: 1px solid lightgrey;
+
+        button {
+            margin: 0 5px;
+            height: 40px;
+            width: 100px;
+            border: 1px solid $base-color;
+            border-radius: 5px;
+            color: $neutral-color;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quit_quiz {
+            color: $base-color;
+
+            &:hover {
+                color: $neutral-color;
+                background: $base-color;    
+            }
+        }
+
+        .start_quiz {
+            color: $neutral-color;
+            background: $base-color;
+
+            &:hover {
+                background: $start-hover;
+            }
+        }
+    }
+}
