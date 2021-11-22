@@ -1,3 +1,170 @@
 @import "./general";
 @import "./start";
 @import "./rules";
+
+.quiz_box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    background: $neutral-color;
+    border-radius: 5px;
+
+    header {
+        position: relative;
+        z-index: 99;
+        height: 70px;
+        padding: 0 30px;
+        background: $neutral-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 3px 5px 1px $box-shadow;
+
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .timer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 145px;
+            height: 45px;
+            background: $timer-box;
+            border: 1px solid $timer-border;
+            border-radius: 5px;
+            padding: 0 8px;
+
+            .time_text {
+                font-weight: 400;
+                font-size: 17px;
+                user-select: none;
+            }
+
+            .timer_sec {
+                font-size: 18px;
+                font-weight: 600;
+                background: $timer;
+                height: 30px;
+                width: 45px;
+                color: $neutral-color;
+                text-align: center;
+                line-height: 30px;
+                border-radius: 5px;
+                border: 1px solid $timer;
+                user-select: none;
+            }
+        }
+    }
+
+    section {
+        padding: 25px 30px 20px;
+        background: $neutral-color;
+
+        .question_text {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .option_list {
+            padding: 20px 0;
+            display: block;
+
+            .option {
+                background: aliceblue;
+                border: 1px solid $option-border;
+                border-radius: 5px;
+                padding: 8px 15px;
+                margin-bottom: 15px;
+                font-size: 17px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                &:hover {
+                    color: $option-hover;
+                    background: $timer-box;
+                    border-color: $timer-border;
+                }
+
+                .icon {
+                    height: 26px;
+                    width: 26px;
+                    border: 2px solid transparent;
+                    border-radius: 50%;
+                    text-align: center;
+                    font-size: 13px;
+                    line-height: 24px;
+                    pointer-events: none;
+                }
+
+                .tick {
+                    color: $option-tick;
+                    border-color: $option-tick;
+                    background: $option-tick-background;
+                }
+
+                .cross {
+                    color: $option-cross;
+                    border-color: $option-cross;
+                    background: $option-cross-background;
+                }
+            }
+        }
+    }
+
+    footer {
+        height: 60px;
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .total_questions {
+            span {
+                display: flex;
+                user-select: none;
+
+                p {
+                    font-weight: 600;
+                    padding: 0 5px;
+
+                    &:first-child {
+                        padding-left: 0px;
+                    }
+                }
+            }
+        }
+
+        .next_btn {
+            height: 40px;
+            padding: 0 13px;
+            font-size: 18px;
+            font-weight: 400;
+            border: none;
+            outline: none;
+            color: $neutral-color;
+            background: $base-color;
+            border-radius: 5px;
+            border: 1px solid $base-color;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: $quiz-footer-background;
+            }
+        }
+    }
+}
