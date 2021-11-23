@@ -1,9 +1,9 @@
 @import "./general";
 @import "./start";
 @import "./rules";
+@import "./result";
 
 .quiz_box {
-    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,6 +11,11 @@
     width: 550px;
     background: $neutral-color;
     border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 4px 8px 0 $box-shadow-color-1,
+                0px 6px 20px 0 $box-shadow-color-2;
 
     header {
         position: relative;
@@ -22,7 +27,7 @@
         align-items: center;
         justify-content: space-between;
         border-radius: 5px 5px 0 0;
-        box-shadow: 0 3px 5px 1px $box-shadow;
+        box-shadow: 0 3px 5px 1px $box-shadow-color;
 
         .title {
             font-size: 20px;
@@ -167,4 +172,12 @@
             }
         }
     }
+}
+
+.activeQuiz {
+    @extend .quiz_box;
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }

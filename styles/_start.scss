@@ -3,6 +3,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px 0 $box-shadow-color-1,
+                0px 6px 20px 0 $box-shadow-color-2;
 
     // Start Quiz Button Styling
     button {

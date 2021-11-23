@@ -1,62 +1,63 @@
-.rule_box {
-    // @extend .activeRule;
+.result_box {
+    background: $neutral-color;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 540px;
-    background: $neutral-color;
+    width: 450px;
+    padding: 25px 30px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
     box-shadow: 0px 4px 8px 0 $box-shadow-color-1,
                 0px 6px 20px 0 $box-shadow-color-2;
-    transition: all 0.3s ease;
 
-    .rule_title {
-        height: 60px;
-        width: 100%;
-        border-bottom: 1px solid lightgrey;
-        display: flex;
-        align-items: center;
-        padding: 0 35px;
+    .icon {
+        font-size: 100px;
+        color: $base-color;
+        margin-bottom: 10px;
+    }
+
+    .complete_text {
         font-size: 20px;
         font-weight: 600;
     }
 
-    .rule_list {
-        padding: 15px 35px;
+    .score_text {
 
-        .rule {
-            margin: 5px 0;
-            font-size: 17px;
+        span {
+            display: flex;
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: 400;
 
-            span {
+            p {
                 font-weight: 600;
-                color: $base-color;
+                padding: 0 4px;
             }
         }
     }
 
     .buttons {
-        height: 60px;
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding: 0 35px;
-        border-top: 1px solid lightgrey;
+        margin: 20px 0;
 
         button {
-            margin: 0 5px;
+            margin: 0 10px;
             height: 40px;
-            width: 100px;
+            padding: 0 20px;
+            border: none;
             outline: none;
-            border: 1px solid $base-color;
-            border-radius: 5px;
-            color: $neutral-color;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
+            border-radius: 5px;
+            border: 1px solid $base-color;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -81,8 +82,8 @@
     }
 }
 
-.activeRule {
-    @extend .rule_box;
+.activeResult {
+    @extend .result_box;
     opacity: 1;
     z-index: 5;
     pointer-events: auto;

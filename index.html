@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CISA Practice</title>
 
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="./dist/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -44,10 +45,10 @@
         </header>
         <section>
             <div class="question_text">
-                <span>Which of the following is an analytical review procedure for a payroll system?</span>
+                <!-- <span>Which of the following is an analytical review procedure for a payroll system?</span> -->
             </div>
             <div class="option_list">
-                <div class="option">
+                <!-- <div class="option">
                     <span>Performing reasonableness tests by multiplying the number of employees by the average wage rate</span>
                     <div class="icon tick"><i class="fas fa-check"></i></div>
                 </div>
@@ -60,14 +61,14 @@
                 </div>
                 <div class="option">
                     <span>Testing hours reported on time sheets</span>
-                </div>
+                </div> -->
             </div>
         </section>
 
         <!-- Quiz Box Footer -->
         <footer>
             <div class="total_questions">
-                <span><p>1</p>of<p>3448</p>Questions</span>
+                <!-- <span><p>1</p>of<p>3448</p>Questions</span> -->
             </div>
             <button class="next_btn">Next Question</button>
         </footer>
@@ -78,6 +79,18 @@
         <div class="icon">
             <i class="fas fa-crown"></i>
         </div>
+        <div class="complete_text">You've finished the Quiz!</div>
+        <div class="score_text">
+            <span>and sorry, you only got <p>2</p> out of <p>3448</p></span>
+        </div>
+        <div class="buttons">
+            <button class="start_quiz">Replay Quiz</button>
+            <button class="quit_quiz">Exit</button>
+        </div>
     </div>
+
+    <script src="./scripts/questions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
