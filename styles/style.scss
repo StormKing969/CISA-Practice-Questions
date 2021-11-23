@@ -181,3 +181,17 @@
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
+
+.correct {
+    @extend .option;
+    color: $option-correct-color;
+    border-color: $option-tick-background !important;
+    background: $option-correct-border !important;
+}
+
+.wrong {
+    @extend .option;
+    color: $option-wrong-color;
+    border-color: $option-wrong-border !important;
+    background: $option-cross-background !important;
+}

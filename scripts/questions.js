@@ -51,7 +51,18 @@ let questions = [
             "Continue using the existing application since it meets the current requirements",
             "Prepare a maintenance plan that will support the application using the existing code",
             "Bring the escrow version up to date",
-            "the increased complexity of the data model "
+            "Undertake an analysis to determine the business risk"
+        ]
+    },
+    {
+        number: 6,
+        question: "Which of the following is the BEST way to evaluate the effectiveness of access controls to an internal network?",
+        answer: "Perform a system penetration test ",
+        options: [
+            "Review access rights",
+            "Test compliance with operating procedures ",
+            "Perform a system penetration test ",
+            "Review router configuration tables"
         ]
     }
 ]
