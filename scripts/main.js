@@ -63,10 +63,10 @@ function showQuestions(index) {
     const question_text = $(".question_text");
     const option_list = $(".option_list");
     let question_tag = '<span>' + questions[index].number + '. ' + questions[index].question + '</span>'
-    let option_tag =    '<div class="option"><span>' + questions[index].options[0] + '</span></div>' +
-                        '<div class="option"><span>' + questions[index].options[1] + '</span></div>' +
-                        '<div class="option"><span>' + questions[index].options[2] + '</span></div>' +
-                        '<div class="option"><span>' + questions[index].options[3] + '</span></div>';
+    let option_tag =    '<div class="option one"><span>' + questions[index].options[0] + '</span></div>' +
+                        '<div class="option two"><span>' + questions[index].options[1] + '</span></div>' +
+                        '<div class="option three"><span>' + questions[index].options[2] + '</span></div>' +
+                        '<div class="option four"><span>' + questions[index].options[3] + '</span></div>';
 
     question_text.html(question_tag);
     option_list.html(option_tag);
@@ -83,6 +83,7 @@ function questionCounter(question_number) {
 function optionSelected(answer) {
     let userAnswer = answer.textContent;
     let correctAnswer = questions[question_count].answer;
+    // let allOptions = $(".option_list").children.length;
     
     if (userAnswer == correctAnswer) {
         answer.classList.add("correct")
@@ -90,7 +91,25 @@ function optionSelected(answer) {
     } else {
         // console.log("Too Bad")
         answer.classList.add("wrong")
+
+        // Show correct answer
+        if ($(".one").children().html() == correctAnswer) {
+            $(".one").attr("class", "correct");
+        }
+
+        if ($(".two").children().html() == correctAnswer) {
+            $(".two").attr("class", "correct");
+        }
+
+        if ($(".three").children().html() == correctAnswer) {
+            $(".three").attr("class", "correct");
+        }
+
+        if ($(".four").children().html() == correctAnswer) {
+            $(".four").attr("class", "correct");
+        }
     }
 
-    
+    // Disable options after first selection
+    $(".option").addClass("disable");
 }
