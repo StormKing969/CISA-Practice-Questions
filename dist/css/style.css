@@ -328,6 +328,14 @@ body {
           user-select: none;
 }
 
+.quiz_box header .timer_visual_line, .activeQuiz header .timer_visual_line {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  background: #007bff;
+}
+
 .quiz_box section, .activeQuiz section {
   padding: 25px 30px 20px;
   background: #fff;
@@ -374,29 +382,6 @@ body {
   border-color: #b8daff;
 }
 
-.quiz_box section .option_list .option .icon, .activeQuiz section .option_list .option .icon, .quiz_box section .option_list .correct .icon, .activeQuiz section .option_list .correct .icon, .quiz_box section .option_list .wrong .icon, .activeQuiz section .option_list .wrong .icon, .quiz_box section .option_list .disable .icon, .activeQuiz section .option_list .disable .icon {
-  height: 26px;
-  width: 26px;
-  border: 2px solid transparent;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 13px;
-  line-height: 24px;
-  pointer-events: none;
-}
-
-.quiz_box section .option_list .option .tick, .activeQuiz section .option_list .option .tick, .quiz_box section .option_list .correct .tick, .activeQuiz section .option_list .correct .tick, .quiz_box section .option_list .wrong .tick, .activeQuiz section .option_list .wrong .tick, .quiz_box section .option_list .disable .tick, .activeQuiz section .option_list .disable .tick {
-  color: #23903c;
-  border-color: #23903c;
-  background: #d4edda;
-}
-
-.quiz_box section .option_list .option .cross, .activeQuiz section .option_list .option .cross, .quiz_box section .option_list .correct .cross, .activeQuiz section .option_list .correct .cross, .quiz_box section .option_list .wrong .cross, .activeQuiz section .option_list .wrong .cross, .quiz_box section .option_list .disable .cross, .activeQuiz section .option_list .disable .cross {
-  color: #a42834;
-  border-color: #a42834;
-  background: #f8d7da;
-}
-
 .quiz_box footer, .activeQuiz footer {
   height: 60px;
   width: 100%;
@@ -432,6 +417,7 @@ body {
 }
 
 .quiz_box footer .next_btn, .activeQuiz footer .next_btn {
+  display: none;
   height: 40px;
   padding: 0 13px;
   font-size: 18px;
