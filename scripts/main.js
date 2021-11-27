@@ -41,6 +41,19 @@ quit_quiz_completely_btn.click(e => {
 // Restart Button Clicked At The End
 start_quiz_again_btn.click(e => {
     window.location.reload();
+    // result_box.removeClass("activeResult");
+
+    // setTimeout(quiz_box.addClass("activeQuiz"), 3000);
+    // showQuestions(0);
+    // questionCounter(1);
+    // startTimer(15);
+    // timerLine(0);
+
+    // question_count = 0;
+    // question_number = 1;
+    // timeValue = 15;
+    // timeBar = 0;
+    // userScore = 0;
 });
 
 // Start Button Clicked
